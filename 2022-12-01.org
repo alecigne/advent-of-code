@@ -1,0 +1,12 @@
+#+title: 2022-12-01
+
+For part 1, most calories for one elf:
+
+#+begin_src lisp
+  (defun calories (bag) (reduce #'+ bag))
+
+  (defun most-calories-one-elf (bags)
+    (reduce #'max bags :key #'calories))
+#+end_src
+
+Part 2 makes the problem more general.

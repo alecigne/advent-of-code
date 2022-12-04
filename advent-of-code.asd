@@ -7,5 +7,7 @@
   :version "0.0.1"
   :serial t
   :components ((:file "package")
-               (:file "advent-of-code"))
+               (:file "utils")
+               (:file "2022-12-01")
+               (:file "2022-12-02"))
   :depends-on (#:split-sequence))
