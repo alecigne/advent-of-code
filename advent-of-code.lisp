@@ -30,6 +30,36 @@
 (most-calories-n-elves 1 *elf-bags*)    ; more general solution for part 1
 (most-calories-n-elves 3 *elf-bags*)
 
+;;;;;;;;;;;;;;;;
+;; 2022-12-02 ;;
+;;;;;;;;;;;;;;;;
+
+(defun load-strategy (path)
+  (let ((input (uiop:read-file-lines path)))
+    (mapcar #'(lambda (x) (remove #\Space x)) (uiop:read-file-lines path))))
+
+(defvar *rounds* (load-strategy #P"2022-12-02.txt"))
+
+;; Part 1
+
+(defvar *score-alist*
+  '(("AX". 4) ("AY". 8) ("AZ". 3) ("BX". 1) ("BY". 5) ("BZ". 9) ("CX". 7) ("CY". 2) ("CZ". 6)))
+
+(defun get-round-outcome-from-strategy (round strategy)
+  (cdr (assoc round strategy :test #'string=)))
+
+(defun get-total-score-from-rounds (rounds strategy)
+  (reduce #'+ (mapcar #'(lambda (round) (get-round-outcome-from-strategy round strategy)) rounds)))
+
+(get-total-score-from-rounds *rounds* *score-alist*)
+
+;; Part 2
+
+(defvar *score-alist-bis*
+  '(("AX". 3) ("AY". 4) ("AZ". 8) ("BX". 1) ("BY". 5) ("BZ". 9) ("CX". 2) ("CY". 6) ("CZ". 7)))
+
+(get-total-score-from-rounds *rounds* *score-alist-bis*)
+
 ;; Local Variables:
 ;; eval: (display-fill-column-indicator-mode)
 ;; display-fill-column-indicator-column: 100
