@@ -1,6 +1,6 @@
 ;;;; 2022-12-01.lisp
 
-(in-package :advent-of-code)
+(in-package :aoc)
 
 (defvar *bags*
   (load-and-process
