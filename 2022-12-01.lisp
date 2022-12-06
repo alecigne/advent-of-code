@@ -2,7 +2,7 @@
 
 (defvar *bags*
   (load-and-process
-   #P"2022-12-01.txt"
+   #P"inputs/2022-12-01.txt"
    :preprocessor #'(lambda (input) (split-sequence:split-sequence "" input :test #'string=))
    :mapper #'(lambda (bag) (mapcar #'(lambda (calories) (parse-integer calories)) bag))))
 

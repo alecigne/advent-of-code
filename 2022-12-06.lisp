@@ -1,6 +1,6 @@
 (in-package :aoc)
 
-(setq *input* (coerce (uiop:read-file-string #P"2022-12-06.txt") 'list))
+(setq *input* (coerce (uiop:read-file-string #P"inputs/2022-12-06.txt") 'list))
 
 (defun no-repetition-p (seq) (equal (remove-duplicates seq) seq))
 

@@ -12,7 +12,7 @@
                                      (split-sequence:split-sequence " " line :test #'string=)))))
     (list :qty (first numbers) :from (second numbers) :to (third numbers))))
 
-(setf *commands* (load-and-process #P"2022-12-05.txt" :mapper #'command-from-line))
+(setf *commands* (load-and-process #P"inputs/2022-12-05.txt" :mapper #'command-from-line))
 
 (defun execute-command (command)
   (let ((removal (move (getf command :qty)

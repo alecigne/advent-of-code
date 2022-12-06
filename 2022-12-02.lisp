@@ -2,7 +2,7 @@
 
 (in-package :advent-of-code)
 
-(defvar *rounds* (load-and-process #P"2022-12-02.txt"
+(defvar *rounds* (load-and-process #P"inputs/2022-12-02.txt"
                                    :mapper #'(lambda (line) (remove #\Space line))))
 
 (defparameter *strategy* nil)

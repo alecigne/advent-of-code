@@ -1,6 +1,6 @@
 (in-package :advent-of-code)
 
-(setf *data* (load-and-process #P"2022-12-03.txt" :mapper #'(lambda (line) (coerce line 'list))))
+(setf *data* (load-and-process #P"inputs/2022-12-03.txt" :mapper #'(lambda (line) (coerce line 'list))))
 
 (defun find-common-items (item-containers)
   (remove-duplicates (reduce #'intersection item-containers)))
@@ -12,8 +12,7 @@
   (let ((code (char-code item)))
     (if (>= code 97) (- code 96) (- code 38))))
 
-(defun sum-priorities (items)
-  (reduce #'+ items :key #'get-item-priority))
+(defun sum-priorities (items) (reduce #'+ items :key #'get-item-priority))
 
 ;; Part 1
 

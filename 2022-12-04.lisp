@@ -8,7 +8,7 @@
 
 (defun process-line (line) (mapcar #'undash (uncomma line)))
 
-(defvar *data4* (load-and-process #P"2022-12-04.txt" :mapper #'process-line))
+(defvar *data4* (load-and-process #P"inputs/2022-12-04.txt" :mapper #'process-line))
 
 (defun full-overlap-p (couple)
   (destructuring-bind ((min1 max1) (min2 max2)) couple
