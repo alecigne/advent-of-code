@@ -1,5 +1,3 @@
-;;;; 2022-12-04.lisp
-
 (in-package :aoc)
 
 (defun undash (input)

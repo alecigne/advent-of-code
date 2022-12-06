@@ -1,5 +1,3 @@
-;;;; 2022-12-06.lisp
-
 (in-package :aoc)
 
 (setq *input* (coerce (uiop:read-file-string #P"2022-12-06.txt") 'list))

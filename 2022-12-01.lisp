@@ -1,5 +1,3 @@
-;;;; 2022-12-01.lisp
-
 (in-package :aoc)
 
 (defvar *bags*

@@ -1,5 +1,3 @@
-;;;; 2022-12-05.lisp
-
 ;; TODO Made in a hurry -- refactor me -_-
 
 (in-package :aoc)

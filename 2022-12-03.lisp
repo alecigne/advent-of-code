@@ -1,5 +1,3 @@
-;;;; 2022-12-03.lisp
-
 (in-package :advent-of-code)
 
 (setf *data* (load-and-process #P"2022-12-03.txt" :mapper #'(lambda (line) (coerce line 'list))))

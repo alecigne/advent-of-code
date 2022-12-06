@@ -1,4 +1,3 @@
-;;;; 2022-12-02.lisp
 ;; TODO Refactor this "quick & dirty" solution
 
 (in-package :advent-of-code)
