@@ -1,1 +1,48 @@
 My [[https://adventofcode.com/][Advent of Code]] solutions, written in Common Lisp.
+
+* Notes
+:PROPERTIES:
+:CREATED:  [022-12-06 Tue 18:5]
+:END:
+
+** 2022-12-01 ([[file:2022-12-01.lisp][link]])
+:PROPERTIES:
+:CREATED:  [022-12-06 Tue 18:5]
+:END:
+
+For part 1, most calories for one elf:
+
+#+begin_src lisp
+  (defun calories (bag) (reduce #'+ bag))
+
+  (defun most-calories-one-elf (bags)
+    (reduce #'max bags :key #'calories))
+#+end_src
+
+Part 2 makes the problem more general.
+
+** 2022-12-02 ([[file:2022-12-02.lisp][link]])
+:PROPERTIES:
+:CREATED:  [022-12-06 Tue 19:0]
+:END:
+
+- [ ] Refactor: do not hardcode the strategies
+
+** 2022-12-05 ([[file:2022-12-05.lisp][link]])
+:PROPERTIES:
+:CREATED:  [022-12-06 Tue 19:0]
+:END:
+
+- [ ] Refactor (in general...)
+
+** 2022-12-06 ([[file:2022-12-06.lisp][link]])
+:PROPERTIES:
+:CREATED:  [022-12-06 Tue 18:5]
+:END:
+
+- [X] Tail-recursive solution
+
+  Although [[https://0branch.com/notes/tco-cl.html][the Common Lisp standard does not require implementations
+  to eliminate tail calls]], SBCL provides [[http://www.sbcl.org/manual/index.html#Debug-Tail-Recursion][full TCO]].
+
+- [ ] Iterative solution
